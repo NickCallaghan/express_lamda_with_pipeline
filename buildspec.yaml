@@ -60,7 +60,7 @@ phases:
 artifacts:
     files:
         - build.zip
-    name: "ExpressDemoBuildOutput"
+    name: "BuildOutput"
 #   name: artifact-name
 #   discard-paths: no | yes
 #   base-directory: location
