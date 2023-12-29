@@ -14,6 +14,15 @@ app.get("/api/:id", (req, res) => {
     res.status(200).json({ id: req.params.id, message: "Hello World" });
 });
 
+app.get("/api", (req, res) => {
+    res.status(200).json({
+        endpoints: [
+            { path: "/api", description: "Returns all endpoints" },
+            { path: "/api/:id", description: "Returns a specific endpoint" },
+        ],
+    });
+});
+
 if (process.env.ENVIROMENT !== "lamda") {
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
