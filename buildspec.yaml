@@ -14,7 +14,6 @@ phases:
     install:
         on-failure: ABORT
         commands:
-            - git clone $REPO_URL
             - yarn
             - ls node_modules/
         finally:
