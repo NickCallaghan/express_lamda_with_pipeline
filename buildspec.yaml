@@ -15,7 +15,7 @@ phases:
         on-failure: ABORT
         commands:
             - yarn
-            - ls node_modules/
+            - yarn test
         finally:
             - echo "Install phase completed"
     # pre_build:
