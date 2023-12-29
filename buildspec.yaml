@@ -14,7 +14,9 @@ phases:
     install:
         on-failure: ABORT
         commands:
+            - git clone $REPO_URL
             - yarn
+            - ls node_modules/
         finally:
             - echo "Install phase completed"
     # pre_build:
@@ -55,10 +57,12 @@ phases:
 #     base-directory: location
 #     discard-paths: no | yes
 #     file-format: report-format
-# artifacts:
-#   files:
-#     - location
-#     - location
+artifacts:
+    name: "build-output"
+    files:
+        - node_modules/**
+        - src/**
+        - package.json
 #   name: artifact-name
 #   discard-paths: no | yes
 #   base-directory: location
