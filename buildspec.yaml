@@ -16,6 +16,7 @@ phases:
         commands:
             - yarn
             - yarn test
+            - zip -r build.zip *
         finally:
             - echo "Install phase completed"
     # pre_build:
@@ -34,10 +35,10 @@ phases:
     #   commands:
     #     - command
     #     - command
-      finally:
-        - zip -r build.zip *
-    #   # steps:
 #   post_build:
+#       commands:
+#         -
+#   # steps:
 #     run-as: Linux-user-name
 #     on-failure: ABORT | CONTINUE
 #     commands:
