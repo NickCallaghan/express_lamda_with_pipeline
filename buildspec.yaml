@@ -34,9 +34,8 @@ phases:
     #   commands:
     #     - command
     #     - command
-    #   finally:
-    #     - command
-    #     - command
+      finally:
+        - zip -r build.zip *
     #   # steps:
 #   post_build:
 #     run-as: Linux-user-name
@@ -57,11 +56,9 @@ phases:
 #     discard-paths: no | yes
 #     file-format: report-format
 artifacts:
-    name: "ExpressDemoBuildOutput"
     files:
-        - node_modules/**
-        - src/**
-        - package.json
+        - build.zip
+    name: "."
 #   name: artifact-name
 #   discard-paths: no | yes
 #   base-directory: location
