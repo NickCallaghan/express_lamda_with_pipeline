@@ -16,7 +16,8 @@ phases:
         commands:
             - yarn
             - yarn test
-            - zip -r build.zip *
+            - echo "Zipping build artifacts"
+            - zip -rq build.zip *
         finally:
             - echo "Install phase completed"
     # pre_build:
@@ -59,7 +60,7 @@ phases:
 artifacts:
     files:
         - build.zip
-    name: "."
+    name: "ExpressDemoBuildOutput"
 #   name: artifact-name
 #   discard-paths: no | yes
 #   base-directory: location
