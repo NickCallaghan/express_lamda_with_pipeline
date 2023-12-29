@@ -57,7 +57,7 @@ phases:
 #     discard-paths: no | yes
 #     file-format: report-format
 artifacts:
-    name: "build-output"
+    name: "ExpressDemoBuildOutput"
     files:
         - node_modules/**
         - src/**
